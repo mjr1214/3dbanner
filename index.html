@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#banner{
+	width:528px;
+	height:280px;
+	margin:180px auto;
+	perspective:800px;
+}
+#banner ul li{
+	width:130px;
+	height:280px;
+	float:left;
+	position:relative;
+	transform-style:preserve-3d;
+	transition:2s;
+	transform:translateZ(-140px);
+}
+#banner ul li div{
+	width:130px;
+	height:280px;
+	position:absolute;
+}
+/*上*/
+#banner ul li div:nth-child(1){
+	bottom:280px;
+	transform-origin:bottom;
+	transform:translateZ(140px) rotateX(90deg);
+	background-image: url("image/1.jpg");
+}
+/*下*/
+#banner ul li div:nth-child(2){
+	bottom:-280px;
+	transform-origin:top;
+	transform:translateZ(140px) rotateX(-90deg);
+	background-image: url("image/2.jpg");
+}
+/*前*/
+#banner ul li div:nth-child(3){
+	transform:translateZ(140px);
+	background-image: url("image/3.jpg");
+
+}
+/*后*/
+#banner ul li div:nth-child(4){
+	transform:translateZ(-140px) rotateX(180deg);
+	background-image: url("image/4.jpg")
+}
+/*左*/
+/*#banner ul li div:nth-child(5){
+	width:280px;
+	right:130px;
+	transform-origin:right;
+	transform:translateZ(140px) rotateY(-90deg);
+}*/
+/*右*//*
+#banner ul li div:nth-child(6){
+	width:280px;
+	left:130px;
+	transform-origin:left;
+	transform:translateZ(140px) rotateY(90deg);
+}*/
+#banner ul li:nth-child(1) div{
+	background-position:0px;
+}
+#banner ul li:nth-child(2) div{
+	background-position:-130px;
+}
+#banner ul li:nth-child(3) div{
+	background-position:-260px;
+}
+#banner ul li:nth-child(4) div{
+	background-position:-390px;
+}
+#banner:hover ul li{
+	transform:translateZ(-140px) rotateX(180deg);
+}
+#banner ul li:nth-child(4){
+	z-index: -1;
+}
+</style>
+<body>
+<div id="banner">
+	<ul>
+		<li>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</li>
+		<li>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</li>
+		<li>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</li>
+		<li>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
